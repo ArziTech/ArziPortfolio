@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 :root {
-    --background: #0a0a0a;
+    --background: #000;
+    --primary: #0070E0;
+    --accent: #FFA600;
+    --text-color: #ccc;
 }
 
 @layer utilities {
@@ -41,4 +44,8 @@
 
 body {
     @apply bg-background;
+}
+
+.portfolio-container {
+    height: calc(100%);
 }
