@@ -50,20 +50,11 @@ export const StickyScroll = ({
       ref={ref}
     >
       <div className="md:basis-1/3 relative flex items-start px-4">
-        <div className="w-full">
+        <div className="w-full mt-8">
           {content.map((item, index) => (
             // Need to check if the center of this div is in the center on
             // the view
-            <div key={item.title + index} className="my-20">
-              <div
-                className={cn(
-                  "md:hidden w-full aspect-video rounded-md bg-white mb-4" +
-                    " rounded-lg overflow-hidden",
-                  contentClassName
-                )}
-              >
-                {item.content}
-              </div>
+            <div key={item.title + index} className="mb-20 flex flex-col gap-4">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -71,10 +62,20 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-slate-100"
+                className="text-2xl font-bold max-md:!opacity-100 text-slate-100"
               >
                 {item.title}
               </motion.h2>
+              <div
+                className={cn(
+                  "md:hidden w-full aspect-video rounded-md bg-white" +
+                    " rounded-lg overflow-hidden",
+                  contentClassName
+                )}
+              >
+                {item.content}
+              </div>
+
               <motion.p
                 initial={{
                   opacity: 0,
@@ -82,13 +83,13 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-lg text-slate-300 w-full mt-2 md:mt-10"
+                className="text-lg text-slate-300 max-md:!opacity-100  w-full md:mt-10"
               >
                 {item.description}
               </motion.p>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="hidden lg:block h-40" />
         </div>
       </div>
       <div

@@ -39,9 +39,14 @@ export default function layout({ children }: { children: React.ReactNode }) {
     },
   ];
   return (
-    <div className="container">
+    <div
+      className={
+        "container max-w-[1024px] min-h-screen lg:flex" +
+        " lg:flex-col justify-center"
+      }
+    >
       {children}
-      <div className="fixed z-[999999] h-12 right-4 lg:right-1/2 bottom-10 -translate-x-[100%] lg:translate-x-1/2 -translate-y-1/2 grid place-content-center">
+      <div className="fixed z-[999999] h-12 right-4 lg:right-1/2 bottom-4 -translate-x-[100%] lg:translate-x-1/2 -translate-y-1/2 grid place-content-center">
         <FloatingDock
           mobileClassName="scale-150" // only for demo, remove for production
           items={links}

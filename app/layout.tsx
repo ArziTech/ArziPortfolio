@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Sarpanch } from "next/font/google";
+import Background from "@/components/background";
 
 export const metadata: Metadata = {
   title: "ARZI | Professional Web Developer Portfolio by Gunawan",
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${sarpach.variable} text-white antialiased`}
       >
+        <Background />
         {children}
       </body>
     </html>

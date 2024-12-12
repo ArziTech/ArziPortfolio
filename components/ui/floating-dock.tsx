@@ -102,6 +102,12 @@ const FloatingDockDesktop = ({
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
+      // drag
+      // bound the drag
+      drag="x"
+      dragConstraints={{ left: 0, right: 0 }}
+      dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+      whileTap={{ cursor: "grabbing" }}
       className={cn(
         "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
         className

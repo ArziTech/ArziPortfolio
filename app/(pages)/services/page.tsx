@@ -5,86 +5,6 @@ import { CardSpotlight } from "@/components/ui/card-spotlight";
 import ServiceCard from "@/components/service-card";
 import TailwindconnectButton from "@/components/ui/tailwindconnect-button";
 
-const Page = () => {
-  return (
-    <div className={"h-screen flex flex-col"}>
-      <div className="ms-4">
-        <H1>Services</H1>
-      </div>
-
-      <div className={"flex py-12 px-4 lg:px-0 lg:h-full"}>
-        <div
-          className={
-            " h-fit flex flex-col lg:flex-row justify-center" +
-            " items-center gap-8  lg:w-full "
-          }
-        >
-          <ServiceCard service_package="Basic" price={"Rp. 500.000"}>
-            <div className="text-neutral-200 mt-4 relative z-20">
-              Follow these steps to secure your account:
-              <ul className="list-none  mt-2">
-                <Step title="Enter your email address" />
-                <Step title="Create a strong password" />
-                <Step title="Set up two-factor authentication" />
-                <Step title="Verify your identity" />
-              </ul>
-            </div>
-
-            <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-              Ensuring your account is properly secured helps protect your
-              personal information and data.
-            </p>
-            <TailwindconnectButton className={"mt-4"}>
-              Order
-            </TailwindconnectButton>
-          </ServiceCard>
-
-          <ServiceCard service_package="Premium" price={"Rp. 1.000.000"}>
-            <div className="text-neutral-200 mt-4 relative z-20">
-              Follow these steps to secure your account:
-              <ul className="list-none  mt-2">
-                <Step title="Enter your email address" />
-                <Step title="Create a strong password" />
-                <Step title="Set up two-factor authentication" />
-                <Step title="Verify your identity" />
-              </ul>
-            </div>
-
-            <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-              Ensuring your account is properly secured helps protect your
-              personal information and data.
-            </p>
-            <TailwindconnectButton className={"mt-4"}>
-              Order
-            </TailwindconnectButton>
-          </ServiceCard>
-
-          <ServiceCard service_package="Platinum" price={"Rp. 2.000.000"}>
-            <div className="text-neutral-200 mt-4 relative z-20">
-              Follow these steps to secure your account:
-              <ul className="list-none  mt-2">
-                <Step title="Enter your email address" />
-                <Step title="Create a strong password" />
-                <Step title="Set up two-factor authentication" />
-                <Step title="Verify your identity" />
-              </ul>
-            </div>
-
-            <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-              Ensuring your account is properly secured helps protect your
-              personal information and data.
-            </p>
-            <TailwindconnectButton className={"mt-4"}>
-              Order
-            </TailwindconnectButton>
-          </ServiceCard>
-        </div>
-      </div>
-    </div>
-  );
-};
-export default Page;
-
 const Step = ({ title }: { title: string }) => {
   return (
     <li className="flex gap-2 items-start">
@@ -93,6 +13,110 @@ const Step = ({ title }: { title: string }) => {
     </li>
   );
 };
+
+const packages = [
+  {
+    service_package: "Basic",
+    content: (
+      <>
+        <div className="text-neutral-200 mt-4 relative z-20">
+          Follow these steps to secure your account:
+          <ul className="list-none  mt-2">
+            <Step title="Enter your email address" />
+            <Step title="Create a strong password" />
+            <Step title="Set up two-factor authentication" />
+            <Step title="Verify your identity" />
+          </ul>
+        </div>
+
+        <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+          Ensuring your account is properly secured helps protect your personal
+          information and data.
+        </p>
+        <TailwindconnectButton className={"mt-4"}>Order</TailwindconnectButton>
+      </>
+    ),
+  },
+  {
+    service_package: "Basic",
+    content: (
+      <>
+        <div className="text-neutral-200 mt-4 relative z-20">
+          Follow these steps to secure your account:
+          <ul className="list-none  mt-2">
+            <Step title="Enter your email address" />
+            <Step title="Create a strong password" />
+            <Step title="Set up two-factor authentication" />
+            <Step title="Verify your identity" />
+          </ul>
+        </div>
+
+        <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+          Ensuring your account is properly secured helps protect your personal
+          information and data.
+        </p>
+        <TailwindconnectButton className={"mt-4"}>Order</TailwindconnectButton>
+      </>
+    ),
+  },
+  {
+    service_package: "Basic",
+    content: (
+      <>
+        <div className="text-neutral-200 mt-4 relative z-20">
+          Follow these steps to secure your account:
+          <ul className="list-none  mt-2">
+            <Step title="Enter your email address" />
+            <Step title="Create a strong password" />
+            <Step title="Set up two-factor authentication" />
+            <Step title="Verify your identity" />
+          </ul>
+        </div>
+
+        <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+          Ensuring your account is properly secured helps protect your personal
+          information and data.
+        </p>
+        <TailwindconnectButton className={"mt-4"}>Order</TailwindconnectButton>
+      </>
+    ),
+  },
+];
+
+const Page = () => {
+  return (
+    <>
+      <h1 className="h1 ms-4 mt-6 h-fit lg:m-0">Services</h1>
+
+      <div
+        className={
+          "flex mt-8 mb-12 mx-auto justify-center lg:px-0" + " lg:h-full"
+        }
+      >
+        <div
+          className={
+            " h-fit flex flex-col lg:flex-row justify-center" +
+            " items-center gap-6  lg:w-full "
+          }
+        >
+          {packages.map((item, idx) => {
+            return (
+              <>
+                <ServiceCard
+                  service_package={item.service_package}
+                  className={"max-w-[325px]"}
+                >
+                  {item.content}
+                </ServiceCard>
+              </>
+            );
+          })}
+        </div>
+      </div>
+    </>
+  );
+};
+export default Page;
 
 const CheckIcon = () => {
   return (

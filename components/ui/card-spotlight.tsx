@@ -35,7 +35,7 @@ export const CardSpotlight = ({
   return (
     <div
       className={cn(
-        "group/spotlight p-4 lg:p-10 rounded-md relative border" +
+        "group/spotlight p-4 lg:p-6 rounded-md relative border" +
           " border-neutral-800 bg-black dark:border-neutral-800",
         className
       )}

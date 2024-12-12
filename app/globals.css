@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --background: #000;
+    --background: #01001F;
     --primary: #0070E0;
     --accent: #FFA600;
     --text-color: #ccc;
@@ -11,7 +11,7 @@
 
 @layer utilities {
     .h1, .h2, .h3, .h4, .h5, .h6 {
-        @apply font-sarpanch;
+        @apply font-sarpanch font-bold;
     }
 
     .h1 {
@@ -25,6 +25,11 @@
 
     .h3 {
         @apply text-2xl;
+    }
+
+
+    .about-shadow {
+        box-shadow: 0 0 8px 0 rgba(0, 112, 224, 100%);
     }
 
     @media (max-width: 768px) {
@@ -44,6 +49,14 @@
 
 body {
     @apply bg-background;
+    /*background-image: url("../public/images/background.jpg") 10%;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: contain;*/
+    /*background-size: ;*/
+}
+
+p {
+    @apply text-base;
 }
 
 .portfolio-container {

@@ -92,6 +92,9 @@ const Page = () => {
   ];
   return (
     <div>
+      <h2 className="font-sarpanch text-2xl mt-12 mx-4 font">
+        The journey of my life
+      </h2>
       <Timeline data={data}></Timeline>
       <div className="h-60 w-full"></div>
     </div>

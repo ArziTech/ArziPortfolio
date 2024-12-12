@@ -39,7 +39,12 @@ const Page = () => {
     },
   ];
   return (
-    <div className={"flex-grow flex flex-col justify-center items-center"}>
+    <div
+      className={
+        "flex-grow flex flex-col justify-center items-center bg-[#0F172A]" +
+        " mx-8 rounded-2xl p-4 mt-6 mb-12 lg:mx-0"
+      }
+    >
       <AnimatedTestimonials testimonials={testimonials} />
     </div>
   );

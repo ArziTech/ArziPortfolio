@@ -26,7 +26,11 @@ export default {
       center: true,
     },
     extend: {
+      backgroundImage: {
+        space: "url('../public/images/background.png')",
+      },
       colors: {
+        primary: "var(--primary)",
         background: "var(--background)",
       },
       fontFamily: {

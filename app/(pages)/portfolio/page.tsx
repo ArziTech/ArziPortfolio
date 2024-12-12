@@ -48,7 +48,7 @@ const Page = () => {
     },
   ];
   return (
-    <div className="h-screen p-4 md:p-10 flex flex-col">
+    <div className="h-screen p-4 lg:p-0 lg:pb-10 flex flex-col">
       <H1 className={"mb-4"}>My Portfolio</H1>
       <StickyScroll content={content} />
     </div>
