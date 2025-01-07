@@ -17,17 +17,17 @@ const Page = () => {
           The official website for Masjid Raden Patah at Brawijaya University.
           This platform provides information about mosque activities, events,
           and services, designed with a modern and user-friendly interface using
-          Next.js
-          <a
-            className={
-              "px-2 py-1 rounded-md bg-primary hover:bg-blue-700" +
-              " mx-2 text-nowrap" +
-              " mt-2 "
-            }
-            href="https://radenpatah.ub.ac.id/"
-          >
-            Visit Website
-          </a>
+          Next.js.
+          {/*<a*/}
+          {/*  className={*/}
+          {/*    "px-2 py-1 rounded-md bg-primary hover:bg-blue-700" +*/}
+          {/*    " mx-2 text-nowrap" +*/}
+          {/*    " mt-2 "*/}
+          {/*  }*/}
+          {/*  href="https://radenpatah.ub.ac.id/"*/}
+          {/*>*/}
+          {/*  Visit Website*/}
+          {/*</a>*/}
         </div>
       ),
       content: (
@@ -46,18 +46,18 @@ const Page = () => {
         <div className={"leading-relaxed"}>
           Arzi Quiz is a fun and interactive web-based quiz game designed to
           challenge users with various questions. Built using React.js, this
-          project highlights a responsive design and engaging user experience
+          project highlights a responsive design and engaging user experience.
           {/*TODO: CHANGE the url */}
-          <a
-            className={
-              "px-2 py-1 rounded-md bg-primary hover:bg-blue-700" +
-              " mx-2 text-nowrap" +
-              " mt-2 "
-            }
-            href="http://localhost:5173/"
-          >
-            Visit Website
-          </a>
+          {/*<a*/}
+          {/*  className={*/}
+          {/*    "px-2 py-1 rounded-md bg-primary hover:bg-blue-700" +*/}
+          {/*    " mx-2 text-nowrap" +*/}
+          {/*    " mt-2 "*/}
+          {/*  }*/}
+          {/*  href="http://localhost:5173/"*/}
+          {/*>*/}
+          {/*  Visit Website*/}
+          {/*</a>*/}
         </div>
       ),
       content: (
@@ -77,17 +77,17 @@ const Page = () => {
           A collaborative project as part of the Project Based Internship
           program by Luar Sekolah. This project focuses on redesigning the
           website with a modern and responsive interface, ensuring a seamless
-          user experience
-          <a
-            className={
-              "px-2 py-1 rounded-md bg-primary hover:bg-blue-700" +
-              " mx-2 text-nowrap" +
-              " mt-2 "
-            }
-            href="https://collaboration-luar-sekolah-kelompok-1.vercel.app/"
-          >
-            Visit Website
-          </a>
+          user experience.
+          {/*<a*/}
+          {/*  className={*/}
+          {/*    "px-2 py-1 rounded-md bg-primary hover:bg-blue-700" +*/}
+          {/*    " mx-2 text-nowrap" +*/}
+          {/*    " mt-2 "*/}
+          {/*  }*/}
+          {/*  href="https://collaboration-luar-sekolah-kelompok-1.vercel.app/"*/}
+          {/*>*/}
+          {/*  Visit Website*/}
+          {/*</a>*/}
         </div>
       ),
       content: (
@@ -106,17 +106,17 @@ const Page = () => {
         <div className={"leading-relaxed"}>
           A beautifully designed wedding invitation website created to showcase
           event details, guest information, and RSVP functionality. This project
-          emphasizes elegance and user-friendliness
-          <a
-            className={
-              "px-2 py-1 rounded-md bg-primary hover:bg-blue-700" +
-              " mx-2 text-nowrap" +
-              " mt-2 "
-            }
-            href="https://collaboration-luar-sekolah-kelompok-1.vercel.app/"
-          >
-            Visit Website
-          </a>
+          emphasizes elegance and user-friendliness.
+          {/*<a*/}
+          {/*  className={*/}
+          {/*    "px-2 py-1 rounded-md bg-primary hover:bg-blue-700" +*/}
+          {/*    " mx-2 text-nowrap" +*/}
+          {/*    " mt-2 "*/}
+          {/*  }*/}
+          {/*  href="https://collaboration-luar-sekolah-kelompok-1.vercel.app/"*/}
+          {/*>*/}
+          {/*  Visit Website*/}
+          {/*</a>*/}
         </div>
       ),
       content: (
