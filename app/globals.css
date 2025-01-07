@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+root, html, body {
+    height: 100%;
+    width: 100%;
+}
+
 :root {
     --background: #01001F;
+    --card-background: #0F172A;
     --primary: #0070E0;
     --accent: #FFA600;
     --text-color: #ccc;
@@ -61,4 +67,8 @@ p {
 
 .portfolio-container {
     height: calc(100%);
+}
+
+.circuit-bg {
+    background-image: url("../public/circuit-board.svg");
 }

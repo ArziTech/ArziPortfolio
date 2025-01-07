@@ -10,14 +10,14 @@ const Page = () => {
     <div
       id={"target"}
       className={
-        "relative my-3 px-4 bg-[#0070E0]/20 lg:bg-black" +
-        " backdrop-blur-2xl overflow-hidden relative lg:flex" +
-        " lg:max-w-[1024px] rounded-3xl p-4 mb-12 lg:mt-0 lg:flex lg:gap-6" +
-        " lg:about-shadow mx-4 lg:mx-auto flex-grow max-h-full"
+        "relative my-3 px-4 bg-[#0070E0]/20 lg:bg-cardBackground" +
+        " backdrop-blur-2xl " +
+        " lg:max-w-[1024px] rounded-3xl p-4  lg:mt-0 lg:flex lg:gap-6" +
+        " lg:about-shadow mx-4 lg:mx-auto  "
       }
     >
       <div className="flex lg:flex-col justify-center gap-4 items-center">
-        <div className="max-md:size-[109px] lg:w-[222px] lg:h-[271px] lg:rounded-md  bg-gradient-to-br from-primary mt-2 rounded-full max-md:border border-white relative overflow-hidden">
+        <div className="flex-shrink-0  max-md:max-w-[100px] md:w-[200px] aspect-square lg:w-[222px] lg:h-[271px] lg:rounded-md  bg-gradient-to-br from-primary mt-2 rounded-full border border-white relative overflow-hidden">
           <Image
             src={gunawan}
             alt={"picture of gunawan"}
@@ -27,7 +27,7 @@ const Page = () => {
           />
         </div>
         <div>
-          <h2 className="h1">Gunawan</h2>
+          <h2 className="h1 max-md:text-4xl">Gunawan</h2>
           <p className={"text-xl font-light lg:text-center"}>
             Next Js Fullstack Web Developer
           </p>
@@ -36,7 +36,8 @@ const Page = () => {
 
       <article
         className={
-          "mt-4 lg:mt-0 flex flex-col gap-4 text-gray-300" + " text-justify"
+          "mt-4 lg:mt-0 flex flex-col gap-4 text-gray-300 [&_p]:lg:text-lg" +
+          " text-justify h-full"
         }
       >
         <p>
@@ -67,8 +68,6 @@ const Page = () => {
           platform, I strive to deliver work that exceeds expectations.
         </p>
       </article>
-      <div className="size-48 blur-3xl absolute -translate-x-1/2 -translate-y-1/2 bg-primary rounded-full -z-20" />
-      <div className="size-24 blur-3xl absolute bottom-20 right-0 -translate-x-1/5 bg-primary rounded-full -z-20" />
     </div>
   );
 };

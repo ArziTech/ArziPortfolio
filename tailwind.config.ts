@@ -32,6 +32,7 @@ export default {
       colors: {
         primary: "var(--primary)",
         background: "var(--background)",
+        cardBackground: "var(--card-background)",
       },
       fontFamily: {
         sarpanch: "var(--font-sarpanch)",

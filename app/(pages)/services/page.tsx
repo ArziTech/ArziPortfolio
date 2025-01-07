@@ -16,68 +16,30 @@ const Step = ({ title }: { title: string }) => {
 
 const packages = [
   {
-    service_package: "Basic",
+    service_package: "Static Web",
     content: (
       <>
-        <div className="text-neutral-200 mt-4 relative z-20">
-          Follow these steps to secure your account:
-          <ul className="list-none  mt-2">
-            <Step title="Enter your email address" />
-            <Step title="Create a strong password" />
-            <Step title="Set up two-factor authentication" />
-            <Step title="Verify your identity" />
-          </ul>
+        <div className="text-neutral-200 mt-4 space-y-2 [&_p]:text-lg  lg:text-lg relative z-20">
+          <Step title="Design Customization" />
+          <Step title="Responsive Design" />
+          <Step title="Include Source Code" />
+          <p>
+            <span>3</span> Pages
+          </p>
+          <p>
+            <span>3</span> Revisions
+          </p>
+          <p>
+            <span>3</span> days delivery time
+          </p>
         </div>
 
-        <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-          Ensuring your account is properly secured helps protect your personal
-          information and data.
-        </p>
-        <TailwindconnectButton className={"mt-4"}>Order</TailwindconnectButton>
-      </>
-    ),
-  },
-  {
-    service_package: "Basic",
-    content: (
-      <>
-        <div className="text-neutral-200 mt-4 relative z-20">
-          Follow these steps to secure your account:
-          <ul className="list-none  mt-2">
-            <Step title="Enter your email address" />
-            <Step title="Create a strong password" />
-            <Step title="Set up two-factor authentication" />
-            <Step title="Verify your identity" />
-          </ul>
-        </div>
-
-        <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-          Ensuring your account is properly secured helps protect your personal
-          information and data.
-        </p>
-        <TailwindconnectButton className={"mt-4"}>Order</TailwindconnectButton>
-      </>
-    ),
-  },
-  {
-    service_package: "Basic",
-    content: (
-      <>
-        <div className="text-neutral-200 mt-4 relative z-20">
-          Follow these steps to secure your account:
-          <ul className="list-none  mt-2">
-            <Step title="Enter your email address" />
-            <Step title="Create a strong password" />
-            <Step title="Set up two-factor authentication" />
-            <Step title="Verify your identity" />
-          </ul>
-        </div>
-
-        <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-          Ensuring your account is properly secured helps protect your personal
-          information and data.
-        </p>
-        <TailwindconnectButton className={"mt-4"}>Order</TailwindconnectButton>
+        <TailwindconnectButton
+          href={"https://wa.me/6285173050210"}
+          className={"mt-4 text-xl font-normal"}
+        >
+          Order
+        </TailwindconnectButton>
       </>
     ),
   },
@@ -85,7 +47,7 @@ const packages = [
 
 const Page = () => {
   return (
-    <>
+    <div className={""}>
       <h1 className="h1 ms-4 mt-6 h-fit lg:m-0">Services</h1>
 
       <div
@@ -101,19 +63,18 @@ const Page = () => {
         >
           {packages.map((item, idx) => {
             return (
-              <>
-                <ServiceCard
-                  service_package={item.service_package}
-                  className={"max-w-[325px]"}
-                >
-                  {item.content}
-                </ServiceCard>
-              </>
+              <ServiceCard
+                key={idx}
+                service_package={item.service_package}
+                className={"max-w-[325px]"}
+              >
+                {item.content}
+              </ServiceCard>
             );
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Page;

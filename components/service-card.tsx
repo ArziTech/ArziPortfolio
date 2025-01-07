@@ -15,11 +15,11 @@ const ServiceCard = ({
   return (
     <CardSpotlight
       className={cn(
-        "min-h-96 min-w-80  max-w-full lg:max-w-[25rem]",
+        "min-h-96 min-w-80  max-w-full bg-cardBackground lg:max-w-[25rem]",
         className
       )}
     >
-      <h3 className="text-xl h3 !font-medium relative z-20 mt-2 text-white">
+      <h3 className="text-xl h2 !font-medium relative z-20 mt-2 text-white">
         {service_package}
       </h3>
 

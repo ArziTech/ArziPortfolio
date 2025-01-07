@@ -9,7 +9,7 @@ export const StickyScroll = ({
 }: {
   content: {
     title: string;
-    description: string;
+    description: React.ReactNode | string;
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
@@ -43,10 +43,7 @@ export const StickyScroll = ({
 
   return (
     <motion.div
-      animate={{
-        backgroundColor: "var(--slate-900)",
-      }}
-      className="h-full overflow-y-auto flex justify-center relative space-x-10 rounded-md"
+      className="h-full overflow-y-auto flex justify-center bg-slate-500/25 backdrop-blur-md relative space-x-10 rounded-md"
       ref={ref}
     >
       <div className="md:basis-1/3 relative flex items-start px-4">
@@ -76,17 +73,18 @@ export const StickyScroll = ({
                 {item.content}
               </div>
 
-              <motion.p
+              <motion.div
                 initial={{
                   opacity: 0,
                 }}
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-lg text-slate-300 max-md:!opacity-100  w-full md:mt-10"
+                className="text-lg text-slate-300 max-md:!opacity-100  w-full md:mt-4"
               >
+                {/*<p dangerouslySetInnerHTML={{ __html: item.description }}></p>*/}
                 {item.description}
-              </motion.p>
+              </motion.div>
             </div>
           ))}
           <div className="hidden lg:block h-40" />

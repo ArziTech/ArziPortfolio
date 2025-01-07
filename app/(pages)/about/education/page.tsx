@@ -91,7 +91,7 @@ const Page = () => {
     },
   ];
   return (
-    <div>
+    <div className={"h-full"}>
       <h2 className="font-sarpanch text-2xl mt-12 mx-4 font">
         The journey of my life
       </h2>
